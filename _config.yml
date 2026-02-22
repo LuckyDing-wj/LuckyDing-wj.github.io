@@ -1,0 +1,30 @@
+theme: minima
+title: Java 学习笔记
+description: 记录 Java 学习过程中的资料、框架和文档
+author: Java学习者
+
+# 导航链接
+header_pages:
+  - about.md
+
+# Markdown 设置
+markdown: kramdown
+highlighter: rouge
+
+# 插件
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 排除文件
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,316 @@
+/* ========================================
+   Java 学习笔记 - 网站样式
+   ======================================== */
+
+/* 全局变量 */
+:root {
+  --primary-color: #f89820;      /* Java 橙色 */
+  --primary-dark: #e08818;
+  --secondary-color: #5382a1;     /* Java 蓝色 */
+  --text-color: #333;
+  --text-light: #666;
+  --bg-color: #f5f5f5;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* 基础重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* ========================================
+   Header 头部
+   ======================================== */
+.site-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.site-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ========================================
+   Navigation 导航
+   ======================================== */
+.main-nav {
+  background: var(--card-bg);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* ========================================
+   Main Content 主内容
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ========================================
+   Section 分区
+   ======================================== */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ========================================
+   Card Cards 卡片
+   ======================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+}
+
+.card-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: var(--primary-dark);
+}
+
+.card-description {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--bg-color);
+  color: var(--text-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* ========================================
+   Topic List 主题列表
+   ======================================== */
+.topic-list {
+  list-style: none;
+}
+
+.topic-list li {
+  background: var(--card-bg);
+  margin-bottom: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.topic-list li:hover {
+  transform: translateX(8px);
+  border-left: 4px solid var(--primary-color);
+}
+
+.topic-list a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic-list a:hover {
+  color: var(--primary-color);
+}
+
+.topic-list .status {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.status.done {
+  background: #4caf50;
+  color: white;
+}
+
+.status.progress {
+  background: #ff9800;
+  color: white;
+}
+
+.status.todo {
+  background: #9e9e9e;
+  color: white;
+}
+
+/* ========================================
+   Footer 页脚
+   ======================================== */
+.site-footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+.site-footer p {
+  opacity: 0.8;
+}
+
+/* ========================================
+   Responsive 响应式
+   ======================================== */
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    gap: 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================================
+   Utility Classes 工具类
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-light);
+}
+
+.highlight {
+  background: linear-gradient(120deg, var(--primary-color) 0%, var(--primary-color) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 40%;
+  background-position: 0 85%;
+}
+
+/* Java Logo 样式 */
+.java-logo {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+/* ========================================
+   Code Blocks 代码块
+   ======================================== */
+code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
