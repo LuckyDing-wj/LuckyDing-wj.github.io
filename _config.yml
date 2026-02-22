@@ -8,6 +8,8 @@ header_pages:
   - about.md
 
 # Markdown 设置
+permalink: /:year/:month/:day/:title.html
+
 markdown: kramdown
 highlighter: rouge
 
