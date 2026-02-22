@@ -868,4 +868,12 @@ CompletableFuture.supplyAsync(() -> "Hello")
 
 ---
 
+## 相关链接
+
+- [学习资源汇总](/2025/02/22/learning-resources.html)
+- [返回学习路线](/#roadmap)
+
+---
+
 *持续更新中...*
+
